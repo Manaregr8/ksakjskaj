@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Workshop</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Cabin+Sketch:wght@400;700&family=Londrina+Outline&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Nabla&family=Playwrite+IN:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
     * {
       padding: 0;
@@ -15,7 +14,7 @@
       box-sizing: border-box;
     }
 body{
-  background-color: #4FACF7;
+  background-color: white;
 }
     .raleway-font {
       font-family: "Raleway", sans-serif;
@@ -33,7 +32,36 @@ body{
       max-width: 1400px;
       margin: auto;
     }
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
 
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 0;
+}
+        summary::after {
+            content: "+";
+            position: absolute;
+            right: 20px;
+        }
+        details[open] summary::after{
+            content: "-";
+        }
+/* Scrollbar thumb (handle) */
+::-webkit-scrollbar-thumb {
+  background: #008cff;
+  padding: 0;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0; /* For spacing */
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #008cff;
+}
     .text-wall {
       position: absolute;
       top: 0;
@@ -86,7 +114,7 @@ body{
       padding: 60px;
       border-radius: 0% 0% 60% 0% / 80% 10% 70% 20%;
       width: 100%;
-      max-width: 60vw;
+      max-width: 65vw;
       box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     }
 
@@ -94,6 +122,11 @@ body{
       font-size: 4.5rem;
       margin-bottom: 10px;
       text-transform: uppercase;
+  font-family: "Tourney", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
     }
     
 .jingle{
@@ -101,6 +134,7 @@ body{
   display: flex;
   font-size: 2rem;
   text-transform: uppercase;
+        color:#008cff;
 }
 .chapter{
   position: absolute;
@@ -119,13 +153,15 @@ align-items: center;
   color: rgb(255, 196, 0);
 }
 .jingle span{
-        color: rgba(136, 143, 155, 0.521);
+        color: rgb(255, 196, 0);
 }
     .blob-text p {
       font-size: 1.1rem;
-      font-weight: 500;
+      font-weight: 600;
       max-width: 80%;
       margin: 10px 0 20px 0;
+      line-height: 35px;
+      letter-spacing: 1px;
     }
     .graphic1{
   width: 100vw;
@@ -163,9 +199,9 @@ align-items: center;
   content: '✔';
   position: absolute;
   left: 0;
-  color: #00ff88;
+  color: #FFC107;
   font-weight: bold;
-  filter: drop-shadow(0 0 1px #00ff88);
+  filter: drop-shadow(0 0 1px #FFC107);
 }
 .whatsCooking{
   font-family: Raleway;
@@ -212,8 +248,8 @@ align-items: center;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #4FACF7;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   z-index: 0;
 }
@@ -389,6 +425,7 @@ max-width: 70vw;
     }
 
   }
+ 
   /**/
 
 
@@ -405,6 +442,8 @@ max-width: 70vw;
     display: grid;
     grid-template-columns: 1fr 350px;
     grid-gap:20px;
+    max-width: 1400px;
+    margin: auto;
   }
   .leftContent{
     padding: 20px;
@@ -524,6 +563,26 @@ max-width: 70vw;
 .sirName{
   font-size: 13px;
 }
+ summary{
+            position: relative;
+            padding: 1rem;
+            padding-right: 30px;
+            font-size: 1.2rem;
+            font-weight: 500;
+
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        summary::after {
+            content: "+";
+            position: absolute;
+            right: 20px;
+        }
+        details[open] summary::after{
+            content: "-";
+        }
 @media(max-width:871px){
     .mainContent{
     grid-template-columns: 1fr;
@@ -572,6 +631,96 @@ max-width: 70vw;
     .checklist li{
       font-size: 18px;
     }
+}
+.imagesContainer{
+  display: flex;
+  padding: 10px 0 10px 10px;
+}
+.imagesContainer img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: -10px;
+  border: 1px solid #333;
+}
+/**/
+
+
+
+
+
+
+
+.SpeakersImages{
+  position: relative;
+  width: 100%;
+  background-color: white;
+  padding: 40px 0px 40px 0px;
+  overflow: hidden;
+  aspect-ratio: 16/8;
+  max-width: 1400px;
+  margin: auto;
+}
+.SpeakersImages h2{
+  font-size: 40px;
+      text-transform: uppercase;
+  font-family: "Tourney", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  margin: 30px;
+}
+.container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr 1fr;
+  grid-gap: 0;
+  transition: grid-template-columns 0.8s ease-in-out;
+}
+.container img{
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  border: 10px solid #008cff;
+  border-radius: 5px;
+}
+
+.squareGarphics{
+  content: "";
+  top: 0;
+  right: 0;
+  transform: translateX(30%);
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  border: 3px solid #008cff;
+}
+.squareGarphis{
+    content: "";
+  bottom: 0;
+  left: 0;
+  transform: translateX(-30%);
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  border: 3px solid #008cff;
+}
+
+
+
+.lineSection{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.4fr;
+  background-color: white;
+padding-bottom: 30px;
+}
+.line{
+  content: "";
+  height: 20px;
+  border-top: 2px dotted #008cff;
+}
 </style>
 </head>
 <body>
@@ -631,12 +780,13 @@ max-width: 70vw;
   </div>
 </section>
 <div class="lineSection">
-  <div></div>
-  <div class="containerLine">
+    <div class="containerLine">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
   </div>
+  <div></div>
+
 </div>
 <section class="mainContent">
   <div class="leftContent">
@@ -654,6 +804,20 @@ max-width: 70vw;
           <div class="agendaP">
             <p>Introduction to Cybersecurity</p>
             <p class="sirName">by - Vivek Sir</p>
+          </div>
+        </li>
+        <li>
+          <div class="timeSlot">
+            <p>09:30</p>
+            <p>></p>
+            <p>10:00</p>
+          </div>
+          <div class="agendaP">
+            <p>Keynote</p>
+            <p class="sirName">by - Gulshan Sir
+              \
+              
+            </p>
           </div>
         </li>
       </ul>
@@ -700,7 +864,10 @@ max-width: 70vw;
 <div class="interestedMembers">
   <h3>Interested Members!</h3>
   <div class="imagesContainer">
-    <img src="" alt="">
+    <img src="./67443b5c7ca98a63a3a0e499_next label image 2.webp" alt="pseudoImage">
+    <img src="./67443b5c7ca98a63a3a0e499_next label image 2.webp" alt="pseudoImage">
+    <img src="./67443b5c7ca98a63a3a0e499_next label image 2.webp" alt="pseudoImage">
+    <img src="./67443b5c7ca98a63a3a0e499_next label image 2.webp" alt="pseudoImage">
   </div>
   <span>....and More</span>
 </div>
@@ -709,7 +876,17 @@ max-width: 70vw;
 </button>
   </div>
 </section>
-
+<section class="SpeakersImages">
+  <div class="squareGarphics"></div>
+  <div class="squareGarphis"></div>
+  <h2>Meet Our Speakers ...</h2>
+  <div class="container">
+    <img src="./IMG_8565.jpg" alt="">
+    <img src="./IMG_8566.jpg" alt="">
+    <img src="./IMG_8558.jpg" alt="">
+    <img src="./IMG_8555.jpg" alt="">
+  </div>
+</section>
 
 <script>
   window.addEventListener('DOMContentLoaded', () => {
@@ -738,6 +915,23 @@ max-width: 70vw;
     function toggleTrack(element) {
     element.classList.toggle('open');
   }
+   document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".container");
+
+    const frames = [
+      "1.2fr 1fr 1fr 1fr",
+      "1fr 1.2fr 1fr 1fr",
+      "1fr 1fr 1.2fr 1fr",
+      "1fr 1fr 1fr 1.2fr"
+    ];
+
+    let index = 0;
+
+    setInterval(() => {
+      container.style.gridTemplateColumns = frames[index];
+      index = (index + 1) % frames.length;
+    }, 1200);
+  });
 </script>
 
 </body>
